@@ -52,7 +52,7 @@ typedef unsigned long sigset_t;
 #define MINSIGSTKSZ 2048
 #define SIGSTKSZ 8192
 #include <asm-generic/signal-defs.h>
-struct __kernel_sigaction {
+struct sigaction {
   union {
     __sighandler_t _sa_handler;
     void(* _sa_sigaction) (int, struct siginfo *, void *);
